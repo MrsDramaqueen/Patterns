@@ -12,21 +12,21 @@ public:
 class LowLevelSpaceship : public ISpaceship {
 public:
 	void createSpaceship() override {
-		cout << "Космический корабль младшего уровней" << endl;
+		cout << "Junior spaceship" << endl;
 	}
 };
 
 class MiddleLevelSpaceship : public ISpaceship {
 public:
 	void createSpaceship() override {
-		cout << "Космический корабль среднего уровней" << endl;
+		cout << "Middle spaceship" << endl;
 	}
 };
 
 class HighLevelSpaceship : public ISpaceship {
 public:
 	void createSpaceship() override {
-		cout << "Космический корабль высокого уровня" << endl;
+		cout << "High level spaceship" << endl;
 	}
 };
 
@@ -38,7 +38,7 @@ public:
 class LowStyle : public IStyle {
 public:
 	void reachStyle(ISpaceship* spaceship) override {
-		cout << "Детский стиль: ";
+		cout << "Kids style: ";
 		spaceship->createSpaceship();
 	}
 };
@@ -46,7 +46,7 @@ public:
 class MiddleStyle : public IStyle {
 public:
 	void reachStyle(ISpaceship* spaceship) override {
-		cout << "Стиль познающего:  ";
+		cout << "The knower's style:  ";
 		spaceship->createSpaceship();
 	}
 };
@@ -54,7 +54,7 @@ public:
 class HighStyle : public IStyle {
 public:
 	void reachStyle(ISpaceship* spaceship) override {
-		cout << "Стиль преисполневшегося в своем познании: ";
+		cout << "The style of the one filled with knowledge: ";
 		spaceship->createSpaceship();
 	}
 };

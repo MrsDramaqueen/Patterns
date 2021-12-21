@@ -21,12 +21,12 @@ public:
 	}
 
 	float* getCurrency() override {
-		cout << " оличество правильных ответов на вопросы в ходе данного урока составл€ет: " << endl;
+		cout << "The number of correct answers to questions during this lesson is: " << endl;
 		return currentNumber;
 	}
 
 	void adjust() override {
-		cout << " онвертаци€ правильных ответов в игровую валюту" << endl;
+		cout << "Converting correct answers to game currency" << endl;
 	}
 };
 
@@ -43,7 +43,7 @@ public:
 	}
 protected:
 	void adjust() {
-		cout << "«а каждый правильный ответ начилс€етс€ 10 монет" << endl;
+		cout << "For each correct answer, 10 coins are awarded" << endl;
 	}
 };
 
@@ -59,7 +59,7 @@ public:
 	float* getCurrency() override {
 		convert = Coins::getCurrency();
 		*convert = *convert * 10;
-		cout << " оличество монет, заработанных в ходе задани€: " << endl;
+		cout << "The number of coins earned during the task: " << endl;
 		return convert;
 	}
 

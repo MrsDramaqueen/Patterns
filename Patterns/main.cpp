@@ -15,16 +15,16 @@ int main() {
 
 	setlocale(LC_ALL, "rus");
 	//Реализация Proxy
-	cout << "Реализация паттерна Proxy" << endl;
+	cout << "Realization pattern Proxy" << endl;
 	ITask* myTask = new ProxyTask(new Task());
 
 
-	cout << myTask->giveHelp("Юпитер") << endl;
-	cout << myTask->giveHelp("Марс") << endl;
+	cout << myTask->giveHelp("Jupiter") << endl;
+	cout << myTask->giveHelp("Mars") << endl;
 	cout << myTask->giveHelp("4") << endl;
 
 	//Bridge (Делегирование)
-	cout << "Реализация паттерна Bridge (Делегирование)" << endl;
+	cout << "Realization pattern Bridge (Делегирование)" << endl;
 	ILesson* lesson = new AstronomyLesson(new MarsPlanet());
 	lesson->change();
 
@@ -45,7 +45,7 @@ int main() {
 
 
 	//Реализация Adapter
-	cout << "\nРеализация паттерна Adapter" << endl;
+	cout << "\nRealization pattern Adapter" << endl;
 	float answers = 23;
 
 	Exchange* rAnswers = new RightAnswers(&answers);
@@ -58,7 +58,7 @@ int main() {
 	vMoney->adjust();
 
 	//Реализация Iterator
-	cout << "\nРеализация паттерна Iterator" << endl;
+	cout << "\nRealization pattern Iterator" << endl;
 	AnswerStack stack1;
 	for (int i = 1; i < 5; i++) {
 		stack1.push(i);
@@ -74,7 +74,7 @@ int main() {
 
 
 	//Реализация паттерна Facade
-	cout << "\nРеализация Facade" << endl;
+	cout << "\nRealization pattern Facade" << endl;
 
 	SchoolShop schoolShop;
 
@@ -90,13 +90,13 @@ int main() {
 
 
 	//Реализация паттерна Singleton
-	cout << "\nРеализация Singleton" << endl;
+	cout << "\nRealization pattern Singleton" << endl;
 	ApplicationConnection::getConnection()->insertData("USER_1", "SCHOOL_1", "CLASS_1");
 
-	cout << "Авторизованные пользователи: " << ApplicationConnection::getConnection()->selectData() << endl;
+	cout << "Authorized Users: " << ApplicationConnection::getConnection()->selectData() << endl;
 
 	//Реализация паттерна Abstract Factory
-	cout << "\nРеализация Abstract Factory" << endl;
+	cout << "\nRealization pattern Abstract Factory" << endl;
 	IFactory* lFactory = new LowLevelFactory();
 
 	ISpaceship* lSpaceship = lFactory->startSpaceship();

@@ -7,7 +7,7 @@ using namespace std;
 
 class ApplicationConnection {
 	ApplicationConnection() {
-		cout << "Авторизация" << endl;
+		cout << "Autorization" << endl;
 	}
 	static ApplicationConnection* applicationConnection;
 
@@ -29,7 +29,7 @@ public:
 	}
 
 	void insertData(string n, string s, string c) {
-		cout << "Имя Пользователя: " << n << endl << "Школа: " << s << endl << "Класс: " << c << endl;;
+		cout << "User Name: " << n << endl << "School: " << s << endl << "Class: " << c << endl;;
 		name = n;
 		school = s;
 		clas = c;

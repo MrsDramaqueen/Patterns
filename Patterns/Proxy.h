@@ -19,19 +19,19 @@ private:
 
 public:
 	Task() {
-		description = "Назовите самую крупную планету в нашей Солнечной системе: ";
-		rightAnswer = "Юпитер";
-		helpMessage = "Эта пятая планета по счету от Солнца";
+		description = "What is the largest planet in our solar system: ";
+		rightAnswer = "Jupiter";
+		helpMessage = "This is the fifth planet in a row from the Sun";
 	}
 
 	string giveHelp(string num) override {
 		cout << description << endl;
-		string currentAnswer = "Ваш ответ на вопрос: " + num;
+		string currentAnswer = "Your answer to the question: " + num;
 		if (num == rightAnswer) {
-			currentAnswer += "\nОтвет верен!!\n";
+			currentAnswer += "\nThe answer is correct !!!\n";
 		}
 		else {
-			currentAnswer += "\nОтвет неверен. Подсказка: " + helpMessage + "\n";
+			currentAnswer += "\nThe answer is incorrect. Help: " + helpMessage + "\n";
 		}
 		return currentAnswer;
 	}
@@ -54,7 +54,7 @@ public:
 		}
 		else {
 			currentAnswer = cache[num];
-			currentAnswer.insert(0, "Вы уже отвечали на этот вопрос. Переходите к следующему!!");
+			currentAnswer.insert(0, "You have already answered this question. Move on to the next one !!");
 		}
 		return currentAnswer;
 	}

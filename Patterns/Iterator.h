@@ -46,10 +46,10 @@ bool operator==(const AnswerStack& s1, const AnswerStack& s2) {
 		}
 	}
 	if ((!it1()) && (!it2())) {
-		cout << "В ходе задания вы правильно ответили на достаточное количество вопросов, чтобы получить бонус!" << endl;
+		cout << "During the assignment, you answered enough questions correctly to receive a bonus!" << endl;
 	}
 	else {
-		cout << "Вам немного не хватило до получения бонуса. Не переживайте, получится в следующий раз!!" << endl;
+		cout << "You didn't have enough before getting the bonus. Don't worry, it will work next time !!" << endl;
 	}
 	return !it1() && !it2();
 }

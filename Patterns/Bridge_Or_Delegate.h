@@ -12,14 +12,14 @@ public:
 class MarsPlanet : public IPlanet {
 public:
 	void fly() override {
-		cout << "Планета Марс. ";
+		cout << "The planet Mars. ";
 	}
 };
 
 class SaturnPlanet : public IPlanet {
 public:
 	void fly() override {
-		cout << "Платена Сатурн. ";
+		cout << "The planet Saturn. ";
 	}
 };
 
@@ -39,7 +39,7 @@ public:
 	MathLesson(IPlanet* ip) : ILesson(ip) {}
 	void change() override {
 		planet->fly();
-		cout << "Урок Математики" << endl;
+		cout << "Math lesson" << endl;
 	}
 };
 
@@ -48,7 +48,7 @@ public:
 	AstronomyLesson(IPlanet* ip) : ILesson(ip) {}
 	void change() override {
 		planet->fly();
-		cout << "Урок Астрономии" << endl;
+		cout << "Astronomy Lesson" << endl;
 	}
 };
 
@@ -57,7 +57,7 @@ public:
 	SafetyLesson(IPlanet* ip) : ILesson(ip) {}
 	void change() override {
 		planet->fly();
-		cout << "Урок Безопастности" << endl;
+		cout << "Safety Lesson" << endl;
 	}
 };
 
