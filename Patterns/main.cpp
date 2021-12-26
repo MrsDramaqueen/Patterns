@@ -9,6 +9,7 @@
 #include "Abstract_factory.h"
 #include "Singleton.h"
 #include "Builder.h"
+#include "VIsitor.h"
 
 
 
@@ -141,4 +142,19 @@ int main() {
 
 	Spaceship* highLevelSpaceship = creator.ChangeFullSpaceship();
 	cout << highLevelSpaceship->aboutSpaceship() << endl;
+
+	//Реализация паттерна Visitor
+	cout << "\nРеализация паттерна Visitor" << endl;
+	Mercury mercury;
+	Venus venus;
+	Earth earth;
+	Mars mars;
+
+	Planet* planets[] = { &mercury, &venus, &earth, &mars };
+
+	for (auto planet : planets) {
+		SpaceTravel visitor;
+		planet->accept(visitor);
+		cout << visitor.information << endl;
+	}
 }
