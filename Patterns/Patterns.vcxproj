@@ -148,6 +148,7 @@
     <ClInclude Include="Builder.h" />
     <ClInclude Include="Facade.h" />
     <ClInclude Include="Iterator.h" />
+    <ClInclude Include="Observer.h" />
     <ClInclude Include="Proxy.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="VIsitor.h" />

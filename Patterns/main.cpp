@@ -10,6 +10,7 @@
 #include "Singleton.h"
 #include "Builder.h"
 #include "VIsitor.h"
+#include "Observer.h"
 
 
 
@@ -157,4 +158,14 @@ int main() {
 		planet->accept(visitor);
 		cout << visitor.information << endl;
 	}
+
+	//Реализация паттерна Observer
+	cout << "\nРеализация паттерна Observer" << endl;
+	Weather* weather = new Weather(567);
+
+	JuniorClass* junior = new JuniorClass(weather);
+	MiddleClass* middle = new MiddleClass(weather);
+
+	weather->changePrecipitation(354);
+	weather->changePrecipitation(534);
 }
