@@ -8,6 +8,7 @@
 #include "Facade.h"
 #include "Abstract_factory.h"
 #include "Singleton.h"
+#include "Builder.h"
 
 
 
@@ -117,4 +118,27 @@ int main() {
 	IStyle* hStyle = hFactory->startStyle();
 
 	hStyle->reachStyle(hSpaceship);
+
+	//Реализация паттерна Builder
+	cout << "\nРеализация Паттерна Builder" << endl;
+	//Изменения корабля младшего уровней
+	IEngnierOfSpace* lowEngnier = new LowLevelSpaceshipEngenier();
+	Creator creator(lowEngnier);
+
+	Spaceship* lowLevelSpaceship = creator.ChangeOnlyColor();
+	cout << lowLevelSpaceship->aboutSpaceship() << endl;
+
+	//Изменения корабля среднего уровней
+	IEngnierOfSpace* middleEngnier = new MiddleLevelSpaceshipEngenier();
+	creator.setEngnier(middleEngnier);
+
+	Spaceship* middleLevelSpaceship = creator.ChangeOnlyEngine();
+	cout << middleLevelSpaceship->aboutSpaceship() << endl;
+
+	//Изменения корабля высокого уровней
+	IEngnierOfSpace* highEngnier = new HighLevelSpaceshipEngenier();
+	creator.setEngnier(highEngnier);
+
+	Spaceship* highLevelSpaceship = creator.ChangeFullSpaceship();
+	cout << highLevelSpaceship->aboutSpaceship() << endl;
 }
