@@ -11,6 +11,7 @@
 #include "Builder.h"
 #include "VIsitor.h"
 #include "Observer.h"
+#include "Memento.h"
 
 
 
@@ -168,4 +169,36 @@ int main() {
 
 	weather->changePrecipitation(354);
 	weather->changePrecipitation(534);
+
+	//Реализация паттерна Memento
+	cout << "\nРеализация паттерна Memento" << endl;
+	Purchase* purchase = new Purchase(100, 4);
+
+	Memory* memory = new Memory(purchase);
+	cout << "---------Начальное состояние---------" << endl;
+	purchase->getCoins();
+	purchase->getHelpMessages();
+
+	cout << "---------Трата монет, покупка подсказок---------" << endl;
+	purchase->spend();
+	purchase->buy();
+
+	purchase->getCoins();
+	purchase->getHelpMessages();
+
+	cout << "---------Сохранение состояния---------" << endl;
+	memory->backup();
+
+	cout << "---------Трата монет, покупка подсказок---------" << endl;
+	purchase->spend();
+	purchase->buy();
+
+	purchase->getCoins();
+	purchase->getHelpMessages();
+
+	cout << "---------Восстановление состояния---------" << endl;
+	memory->undo();
+
+	purchase->getCoins();
+	purchase->getHelpMessages();
 }
