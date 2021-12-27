@@ -11,14 +11,14 @@ public:
 class IBackpack : public IProduction {
 public:
 	void release() override {
-		cout << "Для вас выпущен новый рюкзак!!!" << endl;
+		cout << "A new backpack has been released for you !!!" << endl;
 	}
 };
 
 class SpaceSuit : public IProduction {
 public:
 	void release() override {
-		cout << "Для вас выпущен новый скафандр!!!" << endl;
+		cout << "A new spacesuit has been released for you !!!" << endl;
 	}
 };
 

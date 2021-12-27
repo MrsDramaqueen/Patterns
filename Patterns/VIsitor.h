@@ -60,19 +60,19 @@ public:
 	string information;
 	
 	void visit(Mercury& fly) override {
-		information = "На этой планете средняя температура - +500 °C!!!";
+		information = "On this planet, the average temperature is +500 ° C !!!";
 	}
 
 	void visit(Venus& fly) override {
-		information = "На этой планете очень много углекислого газа!!!";
+		information = "There is a lot of carbon dioxide on this planet !!!";
 	}
 
 	void visit(Earth& fly) override {
-		information = "На это планете есть жизнь!!!";
+		information = "There is life on this planet !!!";
 	}
 
 	void visit(Mars& fly) override {
-		information = "Эта планета имеет ярко-красный цвет!!!";
+		information = "This planet is bright red !!!";
 	}
 
 };

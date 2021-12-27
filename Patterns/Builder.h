@@ -12,7 +12,7 @@ public:
 		data = "";
 	}
 	string aboutSpaceship() {
-		cout << "Список изменений: " << endl;
+		cout << "List of changes: " << endl;
 		return data;
 	}
 	void appendData(string info) {
@@ -41,15 +41,15 @@ public:
 	}
 
 	void updateEngine() override {
-		spaceship->appendData("Двигатель вашего космического корабля младшего уровней успешно улучшен!!! ");
+		spaceship->appendData("Your junior spaceship's engine has been successfully upgraded !!! ");
 	}
 
 	void updateWings() override {
-		spaceship->appendData("Крылья вашего космического корабля младшего уровней успешно улучшены!!! ");
+		spaceship->appendData("Your junior spaceship wings have been successfully upgraded !!! ");
 	}
 
 	void changeColor() override {
-		spaceship->appendData("Цвет вашего космического корабля младшего уровней успешно изменен!!! ");
+		spaceship->appendData("Your junior spaceship color changed successfully !!! ");
 	}
 
 	Spaceship* getChanges() override {
@@ -70,15 +70,15 @@ public:
 	}
 
 	void updateEngine() override {
-		spaceship->appendData("Двигатель вашего космического корабля среднего уровней успешно улучшен!!! ");
+		spaceship->appendData("Your mid-level spaceship's engine has been successfully upgraded !!! ");
 	}
 
 	void updateWings() override {
-		spaceship->appendData("Крылья вашего космического корабля среднего уровней успешно улучшены!!! ");
+		spaceship->appendData("The wings of your intermediate spaceship have been successfully upgraded !!! ");
 	}
 
 	void changeColor() override {
-		spaceship->appendData("Цвет вашего космического корабля среднего уровней успешно изменен!!! ");
+		spaceship->appendData("Your mid-level spaceship color changed successfully !!! ");
 	}
 
 	Spaceship* getChanges() override {
@@ -99,15 +99,15 @@ public:
 	}
 
 	void updateEngine() override {
-		spaceship->appendData("Двигатель вашего космического корабля высокого уровней успешно улучшен!!!\n");
+		spaceship->appendData("Your high level spaceship's engine has been successfully upgraded !!!!\n");
 	}
 
 	void updateWings() override {
-		spaceship->appendData("Крылья вашего космического корабля высокого уровней успешно улучшены!!!\n");
+		spaceship->appendData("Your high level spaceship wings have been successfully upgraded !!!\n");
 	}
 
 	void changeColor() override {
-		spaceship->appendData("Цвет вашего космического корабля высокого уровней успешно изменен!!!\n");
+		spaceship->appendData("Your High Level Spaceship Color Changed Successfully !!\n");
 	}
 
 	Spaceship* getChanges() override {

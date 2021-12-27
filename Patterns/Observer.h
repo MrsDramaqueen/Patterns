@@ -55,7 +55,7 @@ public:
 
 	void update(double p) override {
 		if (p > 250) {
-			cout << "Младшие классы не могут исследовать данную область c таким количеством осадков: " << p << endl;
+			cout << "Junior classes cannot explore this area with such a rainfall: " << p << endl;
 			weather->removeObserver(this);
 		}
 	}
@@ -72,7 +72,7 @@ public:
 
 	void update(double p) override {
 		if (p > 500) {
-			cout << "Средние классы не могут исследовать данную область c таким количеством осадков: " << p << endl;
+			cout << "The middle classes cannot explore this area with this amount of precipitation: " << p << endl;
 			weather->removeObserver(this);
 		}
 	}

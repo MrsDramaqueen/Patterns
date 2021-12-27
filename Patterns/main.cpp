@@ -123,31 +123,31 @@ int main() {
 
 	hStyle->reachStyle(hSpaceship);
 
-	//Реализация паттерна Builder
-	cout << "\nРеализация Паттерна Builder" << endl;
-	//Изменения корабля младшего уровней
+	//Realization pattern Builder
+	cout << "\nRealization pattern Builder" << endl;
+	//Minor ship changes
 	IEngnierOfSpace* lowEngnier = new LowLevelSpaceshipEngenier();
 	Creator creator(lowEngnier);
 
 	Spaceship* lowLevelSpaceship = creator.ChangeOnlyColor();
 	cout << lowLevelSpaceship->aboutSpaceship() << endl;
 
-	//Изменения корабля среднего уровней
+	//Mid-tier ship changes
 	IEngnierOfSpace* middleEngnier = new MiddleLevelSpaceshipEngenier();
 	creator.setEngnier(middleEngnier);
 
 	Spaceship* middleLevelSpaceship = creator.ChangeOnlyEngine();
 	cout << middleLevelSpaceship->aboutSpaceship() << endl;
 
-	//Изменения корабля высокого уровней
+	//High Tier Ship Changes
 	IEngnierOfSpace* highEngnier = new HighLevelSpaceshipEngenier();
 	creator.setEngnier(highEngnier);
 
 	Spaceship* highLevelSpaceship = creator.ChangeFullSpaceship();
 	cout << highLevelSpaceship->aboutSpaceship() << endl;
 
-	//Реализация паттерна Visitor
-	cout << "\nРеализация паттерна Visitor" << endl;
+	//Realization pattern Visitor
+	cout << "\nRealization pattern Visitor" << endl;
 	Mercury mercury;
 	Venus venus;
 	Earth earth;
@@ -161,8 +161,8 @@ int main() {
 		cout << visitor.information << endl;
 	}
 
-	//Реализация паттерна Observer
-	cout << "\nРеализация паттерна Observer" << endl;
+	//Realization pattern Observer
+	cout << "\nRealization pattern Observer" << endl;
 	Weather* weather = new Weather(567);
 
 	JuniorClass* junior = new JuniorClass(weather);
@@ -171,41 +171,41 @@ int main() {
 	weather->changePrecipitation(354);
 	weather->changePrecipitation(534);
 
-	//Реализация паттерна Memento
-	cout << "\nРеализация паттерна Memento" << endl;
+	//Realization pattern Memento
+	cout << "\nRealization pattern Memento" << endl;
 	Purchase* purchase = new Purchase(100, 4);
 
 	Memory* memory = new Memory(purchase);
-	cout << "---------Начальное состояние---------" << endl;
+	cout << "---------Initial state---------" << endl;
 	purchase->getCoins();
 	purchase->getHelpMessages();
 
-	cout << "---------Трата монет, покупка подсказок---------" << endl;
+	cout << "---------Spending coins, buying tips---------" << endl;
 	purchase->spend();
 	purchase->buy();
 
 	purchase->getCoins();
 	purchase->getHelpMessages();
 
-	cout << "---------Сохранение состояния---------" << endl;
+	cout << "---------Saving state---------" << endl;
 	memory->backup();
 
-	cout << "---------Трата монет, покупка подсказок---------" << endl;
+	cout << "---------Spending coins, buying tips---------" << endl;
 	purchase->spend();
 	purchase->buy();
 
 	purchase->getCoins();
 	purchase->getHelpMessages();
 
-	cout << "---------Восстановление состояния---------" << endl;
+	cout << "---------State restoration---------" << endl;
 	memory->undo();
 
 	purchase->getCoins();
 	purchase->getHelpMessages();
 
 
-	//Реализация паттерна Factory Method
-	cout << "\nРеализация паттерна Factory Method" << endl;
+	//Realization pattern Factory Method
+	cout << "\nRealization pattern Factory Method" << endl;
 
 	ISpaceShop* produce = new BackpackSpaceShop();
 

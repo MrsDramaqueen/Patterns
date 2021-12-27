@@ -34,16 +34,16 @@ private:
 public:
 	Purchase(int c, int hm) : coins(c), helpMessages(hm) {}
 	void getCoins() {
-		cout << "Количество монет: " << coins << endl;
+		cout << "Number of coins: " << coins << endl;
 	}
 	void getHelpMessages() {
-		cout << "Количество подсказок: " << helpMessages << endl;
+		cout << "Number of tips: " << helpMessages << endl;
 	}
 	void spend() {
 		coins -= 15;
 	}
 	void buy() {
-		++helpMessages;
+		--helpMessages;
 	}
 
 	ExchangeMemento* save() {
