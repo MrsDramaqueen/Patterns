@@ -147,6 +147,7 @@
     <ClInclude Include="Bridge_Or_Delegate.h" />
     <ClInclude Include="Builder.h" />
     <ClInclude Include="Facade.h" />
+    <ClInclude Include="FactoryMethod.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="Memento.h" />
     <ClInclude Include="Observer.h" />

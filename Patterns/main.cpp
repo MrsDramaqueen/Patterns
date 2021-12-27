@@ -12,6 +12,7 @@
 #include "VIsitor.h"
 #include "Observer.h"
 #include "Memento.h"
+#include "FactoryMethod.h"
 
 
 
@@ -201,4 +202,19 @@ int main() {
 
 	purchase->getCoins();
 	purchase->getHelpMessages();
+
+
+	//Реализация паттерна Factory Method
+	cout << "\nРеализация паттерна Factory Method" << endl;
+
+	ISpaceShop* produce = new BackpackSpaceShop();
+
+	IProduction* backpack = produce->create();
+
+	produce = new SpaceSuitSpaceShop();
+
+	IProduction* spacesuit = produce->create();
+
+	backpack->release();
+	spacesuit->release();
 }
